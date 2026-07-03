@@ -321,13 +321,10 @@ function ProductList({ onHomeClick }) {
                             <div className="product-cost">${plant.cost}</div> {/* Display plant cost */}
                             <button
                                 className="product-button"
-                                disabled={addedToCart[plant.name]} 
+                                disabled={addedToCart[plant.name]} // <-- DISABLE WHEN ADDED
                                 onClick={() => handleAddToCart(plant)}
                             >
-                                {addedToCart[plant.name] ? "Added to Cart" : "Add to Cart"} 
-                            </button>
-                            >
-                                Add to Cart
+                                {addedToCart[plant.name] ? "Added to Cart" : "Add to Cart"} {/* <-- TOGGLE LABEL */}
                             </button>
                             </div>
                         ))}
